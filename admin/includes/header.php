@@ -32,6 +32,9 @@ $admin_username = $_SESSION['admin_username'] ?? 'Admin';
             <a href="<?= SITE_URL ?>/admin/activites.php" class="<?= ($active_nav ?? '') === 'activities' ? 'active' : '' ?>">
                 <span class="nav-icon">🦙</span> Activités
             </a>
+            <a href="<?= SITE_URL ?>/admin/traductions.php" class="<?= ($active_nav ?? '') === 'translations' ? 'active' : '' ?>">
+                <span class="nav-icon">🌐</span> Traductions
+            </a>
             <a href="<?= SITE_URL ?>/admin/parametres.php" class="<?= ($active_nav ?? '') === 'settings' ? 'active' : '' ?>">
                 <span class="nav-icon">⚙️</span> Paramètres
             </a>
