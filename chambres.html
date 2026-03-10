@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hébergements — Alpagatitude</title>
+  <meta name="description" content="Découvrez nos hébergements uniques au cœur du domaine.">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+</head>
+<body>
+
+<!-- ══ HEADER ════════════════════════════════════════════════════════════ -->
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="./index.html" class="logo">
+      <span class="logo-icon">🦙</span>
+      <span class="logo-text">Alpagatitude</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" id="main-nav" role="navigation">
+      <ul>
+        <li><a href="./index.html" data-i18n="nav_home">Accueil</a></li>
+        <li><a href="./chambres.html" class="active" data-i18n="nav_rooms">Hébergements</a></li>
+        <li><a href="./activites.html" data-i18n="nav_activities">Activités</a></li>
+        <li><a href="./reservation.html" class="btn-nav" data-i18n="nav_reservation">Réserver</a></li>
+        <li><a href="./contact.html" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="fr" title="Français">🇫🇷</button>
+        <button class="lang-btn" data-lang="en" title="English">🇬🇧</button>
+        <button class="lang-btn" data-lang="es" title="Español">🇪🇸</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+
+<!-- ═══════════ PAGE HERO ═════════════════════════════════════════════════ -->
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="fil d'ariane">
+      <a href="./index.html" data-i18n="nav_home">Accueil</a>
+      <span class="breadcrumb-sep">›</span>
+      <span data-i18n="nav_rooms">Hébergements</span>
+    </nav>
+    <h1 data-i18n="rooms_page_title">Nos Hébergements</h1>
+    <p data-i18n="rooms_page_subtitle">Des logements confortables au cœur du domaine, au plus près de nos alpagas</p>
+  </div>
+</section>
+
+<!-- ═══════════ ROOMS GRID ════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="cards-grid">
+
+      <!-- ─────── Chalet Alpagas ─────── -->
+      <div class="card" id="chalet">
+        <div class="card-img">
+          <img src="./assets/rooms/chalet-alpagas.svg" alt="Le Chalet Alpagas" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h2 data-i18n="room1_name">Le Chalet Alpagas</h2>
+          <p data-i18n="room1_desc_long">Un chalet charmant et chaleureux au cœur du domaine, avec une vue imprenable sur les prairies des alpagas. Idéal pour les familles ou les groupes d'amis.</p>
+          <ul class="room-features">
+            <li>👥 <strong>4</strong> <span data-i18n="rooms_person">personne(s)</span></li>
+            <li>💶 <strong>120,00 €</strong> <span data-i18n="rooms_per_night">/ nuit</span></li>
+            <li>🛏️ <span data-i18n="room1_beds">2 chambres (1 double + 1 twin)</span></li>
+            <li>🚿 <span data-i18n="room_private_bath">Salle de bain privée</span></li>
+            <li>☕ <span data-i18n="room_kitchen">Kitchenette équipée</span></li>
+            <li>📶 <span data-i18n="room_wifi">Wi-Fi inclus</span></li>
+          </ul>
+          <a href="./reservation.html?type=room&id=1" class="btn btn-primary" data-i18n="rooms_book_btn">Réserver ce logement</a>
+        </div>
+      </div>
+
+      <!-- ─────── Lodge du Pré ─────── -->
+      <div class="card" id="lodge">
+        <div class="card-img">
+          <img src="./assets/rooms/lodge-pre.svg" alt="La Lodge du Pré" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h2 data-i18n="room2_name">La Lodge du Pré</h2>
+          <p data-i18n="room2_desc_long">Une lodge spacieuse et confortable bordant les pâturages. Avec sa grande terrasse et son espace de vie ouvert, elle est parfaite pour les familles ou les groupes.</p>
+          <ul class="room-features">
+            <li>👥 <strong>6</strong> <span data-i18n="rooms_person">personne(s)</span></li>
+            <li>💶 <strong>180,00 €</strong> <span data-i18n="rooms_per_night">/ nuit</span></li>
+            <li>🛏️ <span data-i18n="room2_beds">3 chambres (2 doubles + 1 twin)</span></li>
+            <li>🚿 <span data-i18n="room_private_bath">Salle de bain privée</span></li>
+            <li>☕ <span data-i18n="room_kitchen">Kitchenette équipée</span></li>
+            <li>🌿 <span data-i18n="room_terrace">Grande terrasse</span></li>
+            <li>📶 <span data-i18n="room_wifi">Wi-Fi inclus</span></li>
+          </ul>
+          <a href="./reservation.html?type=room&id=2" class="btn btn-primary" data-i18n="rooms_book_btn">Réserver ce logement</a>
+        </div>
+      </div>
+
+      <!-- ─────── Tipi Étoilé ─────── -->
+      <div class="card" id="tipi">
+        <div class="card-img">
+          <img src="./assets/rooms/tipi-etoile.svg" alt="Le Tipi Étoilé" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h2 data-i18n="room3_name">Le Tipi Étoilé</h2>
+          <p data-i18n="room3_desc_long">Vivez une expérience insolite dans notre tipi confortable, idéal pour les couples souhaitant une nuit sous les étoiles avec le doux son de la nature.</p>
+          <ul class="room-features">
+            <li>👥 <strong>2</strong> <span data-i18n="rooms_person">personne(s)</span></li>
+            <li>💶 <strong>90,00 €</strong> <span data-i18n="rooms_per_night">/ nuit</span></li>
+            <li>🛏️ <span data-i18n="room3_beds">1 lit double</span></li>
+            <li>🔥 <span data-i18n="room_campfire">Feu de camp</span></li>
+            <li>🔦 <span data-i18n="room_outdoor">Salle de bain partagée</span></li>
+          </ul>
+          <a href="./reservation.html?type=room&id=3" class="btn btn-primary" data-i18n="rooms_book_btn">Réserver ce logement</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ INFO SÉJOUR ════════════════════════════════════════════════ -->
+<section class="section section-alt">
+  <div class="container" style="max-width:800px;text-align:center;">
+    <h2 data-i18n="rooms_info_title">Informations Pratiques</h2>
+    <span class="section-divider"></span>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-top:2rem;text-align:left;">
+      <div class="feature-card">
+        <div class="feature-icon">🕑</div>
+        <h4 data-i18n="rooms_checkin_title">Arrivée / Départ</h4>
+        <p data-i18n="rooms_checkin_text">Arrivée à partir de 15h, départ avant 11h.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🐾</div>
+        <h4 data-i18n="rooms_pets_title">Animaux</h4>
+        <p data-i18n="rooms_pets_text">Les animaux domestiques ne sont pas admis.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🍳</div>
+        <h4 data-i18n="rooms_breakfast_title">Petit-déjeuner</h4>
+        <p data-i18n="rooms_breakfast_text">Petit-déjeuner disponible sur demande (+10€/pers).</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">✅</div>
+        <h4 data-i18n="rooms_cancel_title">Annulation</h4>
+        <p data-i18n="rooms_cancel_text">Annulation gratuite jusqu'à 48h avant l'arrivée.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CTA RÉSERVER ══════════════════════════════════════════════ -->
+<section class="section section-green" style="text-align:center;">
+  <div class="container">
+    <h2 data-i18n="cta_title">Prêt à vivre l'expérience Alpagatitude ?</h2>
+    <p style="margin:1rem auto;max-width:600px;" data-i18n="cta_text">Réservez dès maintenant votre séjour ou activité. Nos alpagas vous attendent !</p>
+    <a href="./reservation.html" class="btn btn-outline" style="color:var(--cream);border-color:var(--cream);" data-i18n="cta_btn">Réserver maintenant</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ══ FOOTER ════════════════════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">🦙 Alpagatitude</div>
+      <p data-i18n="footer_tagline">Un domaine d'exception avec des alpagas</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="white" stroke-width="2"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h4 data-i18n="footer_links">Liens rapides</h4>
+      <ul>
+        <li><a href="./index.html" data-i18n="nav_home">Accueil</a></li>
+        <li><a href="./chambres.html" data-i18n="nav_rooms">Hébergements</a></li>
+        <li><a href="./activites.html" data-i18n="nav_activities">Activités</a></li>
+        <li><a href="./reservation.html" data-i18n="nav_reservation">Réserver</a></li>
+        <li><a href="./contact.html" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4 data-i18n="footer_contact_title">Contact</h4>
+      <p>📍 <span data-i18n="contact_address_val">123 Route des Alpagas, 00000 La Montagne</span></p>
+      <p>📞 <span data-i18n="contact_phone_val">+33 (0)6 00 00 00 00</span></p>
+      <p>✉️ <a href="mailto:contact@alpagatitude.com" data-i18n="contact_email_val">contact@alpagatitude.com</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>&copy; <span id="footer-year"></span> Alpagatitude — <span data-i18n="footer_rights">Tous droits réservés</span></span>
+      <span data-i18n="footer_made_with">Fait avec ❤️ pour les alpagas</span>
+    </div>
+  </div>
+</footer>
+
+<script src="./js/main.js"></script>
+<script src="./js/i18n.js"></script>
+<script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

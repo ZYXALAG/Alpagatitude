@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="page_rooms_title">Hébergements — Alpagatitude</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo"><span class="logo-icon">🦙</span><span class="logo-text">Alpagatitude</span></a>
+    <nav class="main-nav" id="main-nav">
+      <ul>
+        <li><a href="index.html"       data-i18n="nav_home"></a></li>
+        <li><a href="chambres.html"    class="active" data-i18n="nav_rooms"></a></li>
+        <li><a href="activites.html"   data-i18n="nav_activities"></a></li>
+        <li><a href="contact.html"     data-i18n="nav_contact"></a></li>
+        <li><a href="reservation.html" class="btn-nav" data-i18n="nav_reservation"></a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="fr" onclick="setLang('fr')" title="Français">🇫🇷</button>
+        <button class="lang-btn"        data-lang="en" onclick="setLang('en')" title="English">🇬🇧</button>
+        <button class="lang-btn"        data-lang="es" onclick="setLang('es')" title="Español">🇪🇸</button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<div class="page-hero" style="background:linear-gradient(135deg,rgba(46,90,62,.85),rgba(107,66,38,.7))">
+  <div class="container">
+    <h1 data-i18n="rooms_title"></h1>
+    <p data-i18n="rooms_subtitle"></p>
+  </div>
+</div>
+
+<!-- ROOMS LIST -->
+<section class="section">
+  <div class="container">
+    <div id="rooms-list" class="rooms-detail"></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2 data-i18n="cta_title"></h2>
+    <p data-i18n="cta_text"></p>
+    <a href="reservation.html" class="btn btn-gold" data-i18n="cta_btn"></a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">🦙 Alpagatitude</div>
+        <p data-i18n="footer_tagline"></p>
+      </div>
+      <div class="footer-links">
+        <h4 data-i18n="footer_links"></h4>
+        <ul>
+          <li><a href="index.html"       data-i18n="nav_home"></a></li>
+          <li><a href="chambres.html"    data-i18n="nav_rooms"></a></li>
+          <li><a href="activites.html"   data-i18n="nav_activities"></a></li>
+          <li><a href="reservation.html" data-i18n="nav_reservation"></a></li>
+          <li><a href="contact.html"     data-i18n="nav_contact"></a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4 data-i18n="footer_contact_title"></h4>
+        <p>📍 123 Route des Alpagas, La Montagne</p>
+        <p>📞 +33 6 00 00 00 00</p>
+        <p>✉️ contact@alpagatitude.com</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© 2026 Alpagatitude. <span data-i18n="footer_rights"></span></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/main-static.js"></script>
+<script>
+  function renderRooms() {
+    var el = document.getElementById('rooms-list');
+    if (!el) return;
+    el.innerHTML = ROOMS.map(function (r, i) {
+      var reversed = (i % 2 === 1) ? ' reversed' : '';
+      return '<div class="room-detail-card' + reversed + '">' +
+        '<div class="room-detail-img"><img src="' + r.image + '" alt="' + getItemName(r) + '" loading="lazy"></div>' +
+        '<div class="room-detail-body">' +
+          '<h2>' + getItemName(r) + '</h2>' +
+          '<p>' + getItemDesc(r) + '</p>' +
+          '<ul class="room-features">' +
+            '<li>👥 ' + r.capacity + ' ' + t('rooms_person') + '</li>' +
+          '</ul>' +
+          '<div class="room-price-line">' +
+            '<span class="big-price">' + formatPrice(r.price) + '</span>' +
+            '<span class="price-unit">' + t('rooms_card_price') + '</span>' +
+          '</div>' +
+          '<a href="reservation.html?type=room&id=' + r.id + '" class="btn btn-primary">' + t('rooms_card_btn') + '</a>' +
+        '</div>' +
+      '</div>';
+    }).join('');
+  }
+
+  applyLang();
+</script>
+</body>
+</html>

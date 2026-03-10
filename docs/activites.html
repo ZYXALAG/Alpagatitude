@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="page_activities_title">Activités — Alpagatitude</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo"><span class="logo-icon">🦙</span><span class="logo-text">Alpagatitude</span></a>
+    <nav class="main-nav" id="main-nav">
+      <ul>
+        <li><a href="index.html"       data-i18n="nav_home"></a></li>
+        <li><a href="chambres.html"    data-i18n="nav_rooms"></a></li>
+        <li><a href="activites.html"   class="active" data-i18n="nav_activities"></a></li>
+        <li><a href="contact.html"     data-i18n="nav_contact"></a></li>
+        <li><a href="reservation.html" class="btn-nav" data-i18n="nav_reservation"></a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="fr" onclick="setLang('fr')" title="Français">🇫🇷</button>
+        <button class="lang-btn"        data-lang="en" onclick="setLang('en')" title="English">🇬🇧</button>
+        <button class="lang-btn"        data-lang="es" onclick="setLang('es')" title="Español">🇪🇸</button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<div class="page-hero" style="background:linear-gradient(135deg,rgba(46,90,62,.85),rgba(20,60,30,.8))">
+  <div class="container">
+    <h1 data-i18n="activities_title"></h1>
+    <p data-i18n="activities_subtitle"></p>
+  </div>
+</div>
+
+<!-- ACTIVITIES GRID -->
+<section class="section">
+  <div class="container">
+    <div id="activities-list" class="cards-grid"></div>
+  </div>
+</section>
+
+<!-- INFO BAND -->
+<div class="stats-band">
+  <div class="container">
+    <div class="stats-grid">
+      <div><span class="stat-number">5</span><span class="stat-label" data-i18n="stat_activities"></span></div>
+      <div><span class="stat-number">7j/7</span><span class="stat-label" data-i18n="stat_open"></span></div>
+      <div><span class="stat-number">20+</span><span class="stat-label" data-i18n="stat_alpacas"></span></div>
+      <div><span class="stat-number">★★★★★</span><span class="stat-label" data-i18n="stat_rating"></span></div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2 data-i18n="cta_title"></h2>
+    <p data-i18n="cta_text"></p>
+    <a href="reservation.html" class="btn btn-gold" data-i18n="cta_btn"></a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">🦙 Alpagatitude</div>
+        <p data-i18n="footer_tagline"></p>
+      </div>
+      <div class="footer-links">
+        <h4 data-i18n="footer_links"></h4>
+        <ul>
+          <li><a href="index.html"       data-i18n="nav_home"></a></li>
+          <li><a href="chambres.html"    data-i18n="nav_rooms"></a></li>
+          <li><a href="activites.html"   data-i18n="nav_activities"></a></li>
+          <li><a href="reservation.html" data-i18n="nav_reservation"></a></li>
+          <li><a href="contact.html"     data-i18n="nav_contact"></a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4 data-i18n="footer_contact_title"></h4>
+        <p>📍 123 Route des Alpagas, La Montagne</p>
+        <p>📞 +33 6 00 00 00 00</p>
+        <p>✉️ contact@alpagatitude.com</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© 2026 Alpagatitude. <span data-i18n="footer_rights"></span></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/main-static.js"></script>
+<script>
+  function renderActivities() {
+    var el = document.getElementById('activities-list');
+    if (!el) return;
+    el.innerHTML = ACTIVITIES.map(function (a) {
+      return '<div class="card">' +
+        '<div class="card-img"><img src="' + a.image + '" alt="' + getItemName(a) + '" loading="lazy"></div>' +
+        '<div class="card-body">' +
+          '<h3>' + getItemName(a) + '</h3>' +
+          '<p>' + getItemDesc(a) + '</p>' +
+          '<div class="card-meta">' +
+            '<span class="card-meta-item">⏱ ' + a.duration + '</span>' +
+            '<span class="card-meta-item">👥 ' + a.max + ' ' + t('activities_max') + '</span>' +
+          '</div>' +
+          '<div class="card-meta">' +
+            '<span class="card-price">' + formatPrice(a.price) + ' <small>' + t('activities_per_person') + '</small></span>' +
+            '<a href="reservation.html?type=activity&id=' + a.id + '" class="btn btn-primary btn-sm">' + t('activities_card_btn') + '</a>' +
+          '</div>' +
+        '</div></div>';
+    }).join('');
+  }
+
+  applyLang();
+</script>
+</body>
+</html>

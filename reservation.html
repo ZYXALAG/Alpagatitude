@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réservation — Alpagatitude</title>
+  <meta name="description" content="Réservez votre séjour ou activité au Domaine Alpagatitude.">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+</head>
+<body>
+
+<!-- ══ HEADER ════════════════════════════════════════════════════════════ -->
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="./index.html" class="logo">
+      <span class="logo-icon">🦙</span>
+      <span class="logo-text">Alpagatitude</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" id="main-nav" role="navigation">
+      <ul>
+        <li><a href="./index.html" data-i18n="nav_home">Accueil</a></li>
+        <li><a href="./chambres.html" data-i18n="nav_rooms">Hébergements</a></li>
+        <li><a href="./activites.html" data-i18n="nav_activities">Activités</a></li>
+        <li><a href="./reservation.html" class="btn-nav active" data-i18n="nav_reservation">Réserver</a></li>
+        <li><a href="./contact.html" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="fr" title="Français">🇫🇷</button>
+        <button class="lang-btn" data-lang="en" title="English">🇬🇧</button>
+        <button class="lang-btn" data-lang="es" title="Español">🇪🇸</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+
+<!-- ═══════════ PAGE HERO ═════════════════════════════════════════════════ -->
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="fil d'ariane">
+      <a href="./index.html" data-i18n="nav_home">Accueil</a>
+      <span class="breadcrumb-sep">›</span>
+      <span data-i18n="nav_reservation">Réservation</span>
+    </nav>
+    <h1 data-i18n="resa_page_title">Réservation</h1>
+    <p data-i18n="resa_page_subtitle">Réservez votre séjour ou activité en quelques clics</p>
+  </div>
+</section>
+
+<!-- ═══════════ FORMULAIRE ════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="container" style="max-width:860px;">
+
+    <!-- Type de réservation -->
+    <div style="display:flex;gap:1rem;margin-bottom:2rem;justify-content:center;" id="type-tabs">
+      <button class="type-tab active" data-type="room" data-i18n="resa_tab_room">Hébergement</button>
+      <button class="type-tab" data-type="activity" data-i18n="resa_tab_activity">Activité</button>
+    </div>
+
+    <!--
+      FORMSPREE SETUP:
+      1. Créez un compte sur https://formspree.io
+      2. Créez un nouveau formulaire
+      3. Copiez l'URL du formulaire (ex: https://formspree.io/f/abcdefgh)
+      4. Remplacez "YOUR_FORM_ID" ci-dessous par votre identifiant
+    -->
+    <form class="reservation-form" id="reservation-form"
+          action="https://formspree.io/f/YOUR_FORM_ID"
+          method="POST">
+
+      <!-- Champ caché pour le type -->
+      <input type="hidden" name="_subject" value="Nouvelle réservation - Alpagatitude">
+      <input type="hidden" name="type" id="resa-type" value="room">
+
+      <!-- Choix hébergement / activité -->
+      <div class="form-group" id="field-room">
+        <label class="form-label" for="room" data-i18n="resa_room_label">Hébergement</label>
+        <select class="form-control" name="room" id="room">
+          <option value="" data-i18n="resa_room_placeholder">Choisir un hébergement</option>
+          <option value="chalet" data-price="120.00" data-i18n="room1_name">Le Chalet Alpagas — 120 €/nuit — 4 pers.</option>
+          <option value="lodge" data-price="180.00" data-i18n="room2_name">La Lodge du Pré — 180 €/nuit — 6 pers.</option>
+          <option value="tipi" data-price="90.00" data-i18n="room3_name">Le Tipi Étoilé — 90 €/nuit — 2 pers.</option>
+        </select>
+      </div>
+
+      <div class="form-group" id="field-activity" style="display:none;">
+        <label class="form-label" for="activity" data-i18n="resa_activity_label">Activité</label>
+        <select class="form-control" name="activity" id="activity">
+          <option value="" data-i18n="resa_activity_placeholder">Choisir une activité</option>
+          <option value="balade" data-price="25.00" data-i18n="act1_name">Balade avec les alpagas — 25 €/pers.</option>
+          <option value="nourrissage" data-price="15.00" data-i18n="act2_name">Nourrissage & câlins — 15 €/pers.</option>
+          <option value="seance-photo" data-price="35.00" data-i18n="act3_name">Séance photo — 35 €/pers.</option>
+          <option value="atelier-laine" data-price="40.00" data-i18n="act4_name">Atelier laine & tonte — 40 €/pers.</option>
+          <option value="randonnee" data-price="45.00" data-i18n="act5_name">Randonnée accompagnée — 45 €/pers.</option>
+        </select>
+      </div>
+
+      <!-- Dates -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+        <div class="form-group" id="field-date-start">
+          <label class="form-label" for="date_start" data-i18n="resa_date_start">Date d'arrivée</label>
+          <input type="date" class="form-control" name="date_start" id="date_start" required>
+        </div>
+        <div class="form-group" id="field-date-end">
+          <label class="form-label" for="date_end" data-i18n="resa_date_end">Date de départ</label>
+          <input type="date" class="form-control" name="date_end" id="date_end" required>
+        </div>
+      </div>
+
+      <!-- Nombre de personnes -->
+      <div class="form-group">
+        <label class="form-label" for="guests" data-i18n="resa_guests_label">Nombre de personnes</label>
+        <input type="number" class="form-control" name="guests" id="guests" min="1" max="20" value="2" required>
+      </div>
+
+      <!-- Estimation prix -->
+      <div id="price-summary" style="background:var(--cream-dark);border-radius:12px;padding:1rem 1.5rem;margin:1rem 0;display:none;">
+        <p data-i18n="resa_price_estimate" style="font-weight:600;margin-bottom:.25rem;">Estimation du prix</p>
+        <p id="price-display" style="font-size:1.4rem;color:var(--green);font-weight:700;">--</p>
+        <small style="color:var(--text-light);" data-i18n="resa_price_note">*Estimation non contractuelle. Le prix final sera confirmé par email.</small>
+      </div>
+
+      <!-- Informations personnelles -->
+      <hr style="border:none;border-top:1px solid var(--border,#e2e8e1);margin:1.5rem 0;">
+      <h3 style="margin-bottom:1rem;" data-i18n="resa_personal_title">Vos coordonnées</h3>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+        <div class="form-group">
+          <label class="form-label" for="firstname" data-i18n="resa_firstname">Prénom</label>
+          <input type="text" class="form-control" name="firstname" id="firstname"
+                 data-i18n-ph="resa_firstname_ph" placeholder="Votre prénom" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="lastname" data-i18n="resa_lastname">Nom</label>
+          <input type="text" class="form-control" name="lastname" id="lastname"
+                 data-i18n-ph="resa_lastname_ph" placeholder="Votre nom" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="email" data-i18n="resa_email">Email</label>
+        <input type="email" class="form-control" name="email" id="email"
+               data-i18n-ph="resa_email_ph" placeholder="votre@email.com" required>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="phone" data-i18n="resa_phone">Téléphone</label>
+        <input type="tel" class="form-control" name="phone" id="phone"
+               data-i18n-ph="resa_phone_ph" placeholder="+33 6 00 00 00 00">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="message" data-i18n="resa_message">Message (optionnel)</label>
+        <textarea class="form-control" name="message" id="message" rows="4"
+                  data-i18n-ph="resa_message_ph" placeholder="Demandes spéciales, allergies, questions..."></textarea>
+      </div>
+
+      <!-- Anti-spam honeypot -->
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+      <button type="submit" class="btn btn-primary" style="width:100%;padding:1rem;" data-i18n="resa_submit">
+        Envoyer la demande de réservation
+      </button>
+      <p style="text-align:center;margin-top:.75rem;color:var(--text-light);font-size:.875rem;" data-i18n="resa_submit_note">
+        Vous recevrez une confirmation par email sous 24h.
+      </p>
+    </form>
+
+  </div>
+</section>
+
+</main>
+
+<!-- ══ FOOTER ════════════════════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">🦙 Alpagatitude</div>
+      <p data-i18n="footer_tagline">Un domaine d'exception avec des alpagas</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="white" stroke-width="2"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h4 data-i18n="footer_links">Liens rapides</h4>
+      <ul>
+        <li><a href="./index.html" data-i18n="nav_home">Accueil</a></li>
+        <li><a href="./chambres.html" data-i18n="nav_rooms">Hébergements</a></li>
+        <li><a href="./activites.html" data-i18n="nav_activities">Activités</a></li>
+        <li><a href="./reservation.html" data-i18n="nav_reservation">Réserver</a></li>
+        <li><a href="./contact.html" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4 data-i18n="footer_contact_title">Contact</h4>
+      <p>📍 <span data-i18n="contact_address_val">123 Route des Alpagas, 00000 La Montagne</span></p>
+      <p>📞 <span data-i18n="contact_phone_val">+33 (0)6 00 00 00 00</span></p>
+      <p>✉️ <a href="mailto:contact@alpagatitude.com" data-i18n="contact_email_val">contact@alpagatitude.com</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>&copy; <span id="footer-year"></span> Alpagatitude — <span data-i18n="footer_rights">Tous droits réservés</span></span>
+      <span data-i18n="footer_made_with">Fait avec ❤️ pour les alpagas</span>
+    </div>
+  </div>
+</footer>
+
+<script src="./js/main.js"></script>
+<script src="./js/i18n.js"></script>
+<script>
+document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+// Type tabs (room / activity)
+document.querySelectorAll('.type-tab').forEach(function(tab) {
+  tab.addEventListener('click', function() {
+    document.querySelectorAll('.type-tab').forEach(function(t) { t.classList.remove('active'); });
+    tab.classList.add('active');
+    var type = tab.dataset.type;
+    document.getElementById('resa-type').value = type;
+    if (type === 'room') {
+      document.getElementById('field-room').style.display = '';
+      document.getElementById('field-activity').style.display = 'none';
+      document.getElementById('field-date-end').style.display = '';
+    } else {
+      document.getElementById('field-room').style.display = 'none';
+      document.getElementById('field-activity').style.display = '';
+      document.getElementById('field-date-end').style.display = 'none';
+    }
+    updatePrice();
+  });
+});
+
+// Pre-select from URL params
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var type = params.get('type');
+  if (type === 'activity') {
+    document.querySelector('[data-type="activity"]').click();
+    var id = params.get('id');
+    if (id) {
+      var opts = document.getElementById('activity').options;
+      if (opts[id]) document.getElementById('activity').selectedIndex = parseInt(id);
+    }
+  } else if (type === 'room') {
+    var id = params.get('id');
+    if (id) {
+      document.getElementById('room').selectedIndex = parseInt(id);
+      updatePrice();
+    }
+  }
+})();
+
+// Price calculator
+function updatePrice() {
+  var summary = document.getElementById('price-summary');
+  var display = document.getElementById('price-display');
+  var type = document.getElementById('resa-type').value;
+  var pricePerUnit = 0;
+  if (type === 'room') {
+    var sel = document.getElementById('room');
+    var opt = sel.options[sel.selectedIndex];
+    pricePerUnit = parseFloat(opt ? opt.dataset.price || 0 : 0);
+    var start = document.getElementById('date_start').value;
+    var end   = document.getElementById('date_end').value;
+    if (pricePerUnit > 0 && start && end) {
+      var nights = Math.round((new Date(end) - new Date(start)) / 86400000);
+      if (nights > 0) {
+        summary.style.display = '';
+        display.textContent = (pricePerUnit * nights).toFixed(2) + ' € (' + nights + ' nuit(s))';
+      } else {
+        summary.style.display = 'none';
+      }
+    } else {
+      summary.style.display = 'none';
+    }
+  } else {
+    var sel = document.getElementById('activity');
+    var opt = sel.options[sel.selectedIndex];
+    pricePerUnit = parseFloat(opt ? opt.dataset.price || 0 : 0);
+    var guests = parseInt(document.getElementById('guests').value) || 1;
+    if (pricePerUnit > 0) {
+      summary.style.display = '';
+      display.textContent = (pricePerUnit * guests).toFixed(2) + ' € (' + guests + ' personne(s))';
+    } else {
+      summary.style.display = 'none';
+    }
+  }
+}
+
+['room','activity','date_start','date_end','guests'].forEach(function(id) {
+  var el = document.getElementById(id);
+  if (el) el.addEventListener('change', updatePrice);
+});
+</script>
+</body>
+</html>

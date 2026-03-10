@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alpagatitude — Domaine des Alpagas</title>
+  <meta name="description" content="Un domaine unique au cœur de la nature, où vous rencontrerez nos adorables alpagas.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <style>
+    /* ── Homepage-specific overrides ── */
+    .hero {
+      background: linear-gradient(160deg, rgba(46,90,62,.88) 0%, rgba(107,66,38,.7) 100%),
+                  url('assets/rooms/chalet-alpagas.svg') center/cover no-repeat;
+    }
+    .about-img {
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--green-pale);
+      aspect-ratio: 4/3;
+      display: flex; align-items: center; justify-content: center; font-size: 8rem;
+    }
+    .about-img img { width: 100%; height: 100%; object-fit: cover; }
+  </style>
+</head>
+<body>
+
+<!-- ══ HEADER ══════════════════════════════════════════════════════════════ -->
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">🦙</span>
+      <span class="logo-text">Alpagatitude</span>
+    </a>
+    <nav class="main-nav" id="main-nav">
+      <ul>
+        <li><a href="index.html"        class="active" data-i18n="nav_home"></a></li>
+        <li><a href="chambres.html"     data-i18n="nav_rooms"></a></li>
+        <li><a href="activites.html"    data-i18n="nav_activities"></a></li>
+        <li><a href="contact.html"      data-i18n="nav_contact"></a></li>
+        <li><a href="reservation.html"  class="btn-nav" data-i18n="nav_reservation"></a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="fr" onclick="setLang('fr')" title="Français">🇫🇷</button>
+        <button class="lang-btn"        data-lang="en" onclick="setLang('en')" title="English">🇬🇧</button>
+        <button class="lang-btn"        data-lang="es" onclick="setLang('es')" title="Español">🇪🇸</button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ══ HERO ════════════════════════════════════════════════════════════════ -->
+<section class="hero" id="accueil">
+  <div class="hero-alpaca">🦙</div>
+  <div class="container">
+    <div class="hero-content fade-in-up">
+      <span class="hero-eyebrow" data-i18n="hero_eyebrow"></span>
+      <h1 data-i18n="hero_title"></h1>
+      <p data-i18n="hero_subtitle"></p>
+      <div class="hero-ctas">
+        <a href="chambres.html"    class="btn btn-primary" data-i18n="hero_cta_rooms"></a>
+        <a href="reservation.html" class="btn btn-outline" data-i18n="hero_cta_book"></a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span data-i18n="hero_scroll"></span>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+  </div>
+</section>
+
+<!-- ══ À PROPOS ════════════════════════════════════════════════════════════ -->
+<section class="section" id="apropos">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <div class="section-header" style="text-align:left;">
+          <h2 data-i18n="about_title"></h2>
+          <span class="section-divider" style="margin:0;"></span>
+        </div>
+        <p style="margin-top:1rem;" data-i18n="about_text"></p>
+        <a href="activites.html" class="btn btn-primary mt-3" data-i18n="nav_activities"></a>
+      </div>
+      <div class="about-features">
+        <div class="feature-card">
+          <div class="feature-icon">🦙</div>
+          <h3 data-i18n="about_alpacas"></h3>
+          <p data-i18n="about_alpacas_text"></p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌲</div>
+          <h3 data-i18n="about_nature"></h3>
+          <p data-i18n="about_nature_text"></p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">😌</div>
+          <h3 data-i18n="about_relaxation"></h3>
+          <p data-i18n="about_relaxation_text"></p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">👨‍👩‍👧‍👦</div>
+          <h3 data-i18n="about_family"></h3>
+          <p data-i18n="about_family_text"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ STATS ═══════════════════════════════════════════════════════════════ -->
+<div class="stats-band">
+  <div class="container">
+    <div class="stats-grid">
+      <div><span class="stat-number">20+</span><span class="stat-label" data-i18n="stat_alpacas"></span></div>
+      <div><span class="stat-number">500+</span><span class="stat-label" data-i18n="stat_visitors"></span></div>
+      <div><span class="stat-number" id="stat-rooms-n">3</span><span class="stat-label" data-i18n="stat_rooms"></span></div>
+      <div><span class="stat-number" id="stat-act-n">5</span><span class="stat-label" data-i18n="stat_activities"></span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ HÉBERGEMENTS ════════════════════════════════════════════════════════ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <h2 data-i18n="rooms_title"></h2>
+      <span class="section-divider"></span>
+      <p data-i18n="rooms_subtitle"></p>
+    </div>
+    <div class="cards-grid" id="rooms-preview"></div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="chambres.html" class="btn btn-primary" data-i18n="rooms_see_all"></a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ACTIVITÉS ═══════════════════════════════════════════════════════════ -->
+<section class="section section-green">
+  <div class="container">
+    <div class="section-header">
+      <h2 data-i18n="activities_title"></h2>
+      <span class="section-divider"></span>
+      <p data-i18n="activities_subtitle"></p>
+    </div>
+    <div class="cards-grid" id="activities-preview"></div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="activites.html" class="btn btn-primary" data-i18n="activities_see_all"></a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA ═════════════════════════════════════════════════════════════════ -->
+<section class="cta-section">
+  <div class="container">
+    <h2 data-i18n="cta_title"></h2>
+    <p data-i18n="cta_text"></p>
+    <a href="reservation.html" class="btn btn-gold" data-i18n="cta_btn"></a>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══════════════════════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">🦙 Alpagatitude</div>
+        <p data-i18n="footer_tagline"></p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Instagram">📸</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4 data-i18n="footer_links"></h4>
+        <ul>
+          <li><a href="index.html"       data-i18n="nav_home"></a></li>
+          <li><a href="chambres.html"    data-i18n="nav_rooms"></a></li>
+          <li><a href="activites.html"   data-i18n="nav_activities"></a></li>
+          <li><a href="reservation.html" data-i18n="nav_reservation"></a></li>
+          <li><a href="contact.html"     data-i18n="nav_contact"></a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4 data-i18n="footer_contact_title"></h4>
+        <p>📍 123 Route des Alpagas, La Montagne</p>
+        <p>📞 +33 6 00 00 00 00</p>
+        <p>✉️ contact@alpagatitude.com</p>
+        <p>🕐 Lun–Dim : 9h–18h</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© 2026 Alpagatitude. <span data-i18n="footer_rights"></span></span>
+      <span data-i18n="footer_made_with"></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/main-static.js"></script>
+<script>
+  function renderRooms() {
+    const el = document.getElementById('rooms-preview');
+    if (!el) return;
+    el.innerHTML = ROOMS.slice(0,3).map(r => `
+      <div class="card">
+        <div class="card-img">
+          <img src="${r.image}" alt="${getItemName(r)}" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>${getItemName(r)}</h3>
+          <p>${getItemDesc(r)}</p>
+          <div class="card-meta">
+            <span class="card-meta-item">👥 ${r.capacity} ${t('rooms_person')}</span>
+            <span class="card-price">${formatPrice(r.price)} <small>${t('rooms_card_price')}</small></span>
+          </div>
+          <a href="reservation.html?type=room&id=${r.id}" class="btn btn-primary btn-full">${t('rooms_card_btn')}</a>
+        </div>
+      </div>`).join('');
+  }
+
+  function renderActivities() {
+    const el = document.getElementById('activities-preview');
+    if (!el) return;
+    el.innerHTML = ACTIVITIES.slice(0,3).map(a => `
+      <div class="card">
+        <div class="card-img">
+          <img src="${a.image}" alt="${getItemName(a)}" loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3>${getItemName(a)}</h3>
+          <p>${getItemDesc(a)}</p>
+          <div class="card-meta">
+            <span class="card-meta-item">⏱ ${a.duration}</span>
+            <span class="card-meta-item">👥 ${a.max} max</span>
+          </div>
+          <div class="card-meta">
+            <span class="card-price">${formatPrice(a.price)} <small>${t('activities_per_person')}</small></span>
+            <a href="reservation.html?type=activity&id=${a.id}" class="btn btn-primary btn-sm">${t('activities_card_btn')}</a>
+          </div>
+        </div>
+      </div>`).join('');
+  }
+
+  document.getElementById('stat-rooms-n').textContent = ROOMS.length;
+  document.getElementById('stat-act-n').textContent   = ACTIVITIES.length;
+  applyLang();
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="skyp" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b0d8f5"/>
+      <stop offset="100%" stop-color="#ddf0e8"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#skyp)"/>
+  <!-- Collines -->
+  <ellipse cx="200" cy="380" rx="300" ry="100" fill="#6aad7a" opacity="0.45"/>
+  <ellipse cx="620" cy="360" rx="280" ry="110" fill="#5a9e6f" opacity="0.45"/>
+  <rect x="0" y="360" width="800" height="140" fill="#5a9e6f"/>
+  <!-- Appareil photo (grand plan) -->
+  <!-- Corps boitier -->
+  <rect x="260" y="160" width="280" height="200" rx="20" fill="#2a2a2a"/>
+  <rect x="275" y="175" width="250" height="170" rx="12" fill="#383838"/>
+  <!-- Objectif -->
+  <circle cx="400" cy="262" r="80" fill="#1a1a1a"/>
+  <circle cx="400" cy="262" r="68" fill="#222"/>
+  <circle cx="400" cy="262" r="54" fill="#0d0d0d"/>
+  <circle cx="400" cy="262" r="40" fill="#1a2840"/>
+  <circle cx="400" cy="262" r="28" fill="#0d1520"/>
+  <!-- Reflet objectif -->
+  <circle cx="385" cy="248" r="12" fill="#4080c0" opacity="0.3"/>
+  <circle cx="380" cy="243" r="5" fill="#fff" opacity="0.15"/>
+  <!-- Flash -->
+  <rect x="278" y="178" width="40" height="24" rx="6" fill="#d4a843"/>
+  <!-- Bouton déclencheur -->
+  <ellipse cx="490" cy="165" rx="14" ry="10" fill="#555"/>
+  <ellipse cx="490" cy="162" rx="10" ry="7" fill="#c0392b"/>
+  <!-- Poignée -->
+  <rect x="500" y="200" width="48" height="120" rx="14" fill="#2a2a2a"/>
+  <!-- Griffe porte-flash -->
+  <rect x="360" y="155" width="80" height="12" rx="4" fill="#444"/>
+  <!-- Sangle -->
+  <path d="M 280 175 Q 230 140 200 170" stroke="#8b5e3c" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M 520 175 Q 570 140 600 170" stroke="#8b5e3c" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <!-- Trépied -->
+  <rect x="392" y="360" width="16" height="60" rx="4" fill="#555"/>
+  <line x1="400" y1="420" x2="340" y2="480" stroke="#555" stroke-width="8" stroke-linecap="round"/>
+  <line x1="400" y1="420" x2="400" y2="490" stroke="#555" stroke-width="8" stroke-linecap="round"/>
+  <line x1="400" y1="420" x2="460" y2="480" stroke="#555" stroke-width="8" stroke-linecap="round"/>
+  <!-- Alpaga en arrière plan (flou/fond) -->
+  <ellipse cx="628" cy="370" rx="58" ry="34" fill="#f5f0e8" opacity="0.75"/>
+  <ellipse cx="620" cy="360" rx="55" ry="28" fill="#fff" opacity="0.35"/>
+  <rect x="604" y="396" width="13" height="38" rx="5" fill="#e0d0bc" opacity="0.7"/>
+  <rect x="623" y="397" width="13" height="40" rx="5" fill="#e0d0bc" opacity="0.7"/>
+  <rect x="642" y="397" width="13" height="38" rx="5" fill="#e0d0bc" opacity="0.7"/>
+  <rect x="659" y="394" width="13" height="34" rx="5" fill="#e0d0bc" opacity="0.7"/>
+  <ellipse cx="667" cy="362" rx="22" ry="17" fill="#f5f0e8" opacity="0.75"/>
+  <ellipse cx="675" cy="347" rx="11" ry="15" fill="#f5f0e8" opacity="0.75"/>
+  <ellipse cx="668" cy="335" rx="5" ry="9" fill="#f5f0e8" opacity="0.6" transform="rotate(-15,668,335)"/>
+  <ellipse cx="682" cy="333" rx="5" ry="9" fill="#f5f0e8" opacity="0.6" transform="rotate(15,682,333)"/>
+  <!-- Alpaga 2 (fond) -->
+  <ellipse cx="148" cy="378" rx="50" ry="30" fill="#e8d8c0" opacity="0.65"/>
+  <rect x="128" y="399" width="11" height="34" rx="4" fill="#d4c4ac" opacity="0.6"/>
+  <rect x="145" y="400" width="11" height="36" rx="4" fill="#d4c4ac" opacity="0.6"/>
+  <rect x="162" y="400" width="11" height="34" rx="4" fill="#d4c4ac" opacity="0.6"/>
+  <rect x="178" y="397" width="11" height="31" rx="4" fill="#d4c4ac" opacity="0.6"/>
+  <ellipse cx="184" cy="370" rx="19" ry="15" fill="#e8d8c0" opacity="0.65"/>
+  <ellipse cx="192" cy="357" rx="9" ry="13" fill="#e8d8c0" opacity="0.65"/>
+  <!-- Nuages -->
+  <ellipse cx="130" cy="60" rx="60" ry="20" fill="#fff" opacity="0.7"/>
+  <ellipse cx="90" cy="66" rx="40" ry="16" fill="#fff" opacity="0.7"/>
+  <ellipse cx="170" cy="66" rx="40" ry="16" fill="#fff" opacity="0.7"/>
+  <ellipse cx="680" cy="50" rx="54" ry="18" fill="#fff" opacity="0.65"/>
+</svg>

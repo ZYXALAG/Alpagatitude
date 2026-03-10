@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="page_reservation_title">Réservation — Alpagatitude</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo"><span class="logo-icon">🦙</span><span class="logo-text">Alpagatitude</span></a>
+    <nav class="main-nav" id="main-nav">
+      <ul>
+        <li><a href="index.html"       data-i18n="nav_home"></a></li>
+        <li><a href="chambres.html"    data-i18n="nav_rooms"></a></li>
+        <li><a href="activites.html"   data-i18n="nav_activities"></a></li>
+        <li><a href="contact.html"     data-i18n="nav_contact"></a></li>
+        <li><a href="reservation.html" class="btn-nav active" data-i18n="nav_reservation"></a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="fr" onclick="setLang('fr')" title="Français">🇫🇷</button>
+        <button class="lang-btn"        data-lang="en" onclick="setLang('en')" title="English">🇬🇧</button>
+        <button class="lang-btn"        data-lang="es" onclick="setLang('es')" title="Español">🇪🇸</button>
+      </div>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<div class="page-hero" style="background:linear-gradient(135deg,rgba(184,134,11,.8),rgba(46,90,62,.8))">
+  <div class="container">
+    <h1 data-i18n="reservation_title"></h1>
+    <p data-i18n="reservation_subtitle"></p>
+  </div>
+</div>
+
+<!-- RESERVATION FORM -->
+<section class="section">
+  <div class="container">
+    <div class="form-wrap">
+
+      <!-- Success message (shown after Formspree redirect) -->
+      <div id="form-success" class="alert alert-success" style="display:none">
+        <strong>✅</strong> <span data-i18n="reservation_success"></span>
+      </div>
+
+      <!-- ⚠️  Replace YOUR_FORMSPREE_ID with your real Formspree form ID -->
+      <!-- Create a free form at https://formspree.io then paste the ID here -->
+      <form id="booking-form"
+            action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+            method="POST"
+            novalidate>
+
+        <!-- Hidden subject -->
+        <input type="hidden" name="_subject" value="Nouvelle réservation — Alpagatitude">
+
+        <!-- Honeypot anti-spam -->
+        <input type="text" name="_gotcha" style="display:none">
+
+        <div class="form-section-title" data-i18n="reservation_section_stay"></div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="arrival"   data-i18n="reservation_arrival"></label>
+            <input type="date" id="arrival"  name="arrival"  class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="depart"    data-i18n="reservation_depart"></label>
+            <input type="date" id="depart"   name="depart"   class="form-control" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="guests"    data-i18n="reservation_guests"></label>
+            <input type="number" id="guests" name="guests" class="form-control" min="1" max="20" value="2" required>
+          </div>
+          <div class="form-group">
+            <label for="select-room" data-i18n="reservation_room"></label>
+            <select id="select-room" name="room" class="form-control">
+              <!-- Filled by JS -->
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="select-activity" data-i18n="reservation_activity"></label>
+          <select id="select-activity" name="activity" class="form-control">
+            <!-- Filled by JS -->
+          </select>
+        </div>
+
+        <!-- Price summary -->
+        <div id="price-summary" class="price-summary"></div>
+
+        <hr class="form-divider">
+        <div class="form-section-title" data-i18n="reservation_section_contact"></div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first_name" data-i18n="reservation_first_name"></label>
+            <input type="text" id="first_name" name="first_name" class="form-control" required autocomplete="given-name">
+          </div>
+          <div class="form-group">
+            <label for="last_name"  data-i18n="reservation_last_name"></label>
+            <input type="text" id="last_name"  name="last_name"  class="form-control" required autocomplete="family-name">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email"  data-i18n="reservation_email"></label>
+            <input type="email" id="email"  name="email"  class="form-control" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="phone"  data-i18n="reservation_phone"></label>
+            <input type="tel"   id="phone"  name="phone"  class="form-control" autocomplete="tel">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message" data-i18n="reservation_message"></label>
+          <textarea id="message" name="message" class="form-control" rows="4"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary btn-lg" data-i18n="reservation_submit"></button>
+        </div>
+
+        <p class="form-legal" data-i18n="reservation_legal"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">🦙 Alpagatitude</div>
+        <p data-i18n="footer_tagline"></p>
+      </div>
+      <div class="footer-links">
+        <h4 data-i18n="footer_links"></h4>
+        <ul>
+          <li><a href="index.html"       data-i18n="nav_home"></a></li>
+          <li><a href="chambres.html"    data-i18n="nav_rooms"></a></li>
+          <li><a href="activites.html"   data-i18n="nav_activities"></a></li>
+          <li><a href="reservation.html" data-i18n="nav_reservation"></a></li>
+          <li><a href="contact.html"     data-i18n="nav_contact"></a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4 data-i18n="footer_contact_title"></h4>
+        <p>📍 123 Route des Alpagas, La Montagne</p>
+        <p>📞 +33 6 00 00 00 00</p>
+        <p>✉️ contact@alpagatitude.com</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© 2026 Alpagatitude. <span data-i18n="footer_rights"></span></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/main-static.js"></script>
+<script>
+  // Set min date to today for date pickers
+  (function () {
+    var today = new Date().toISOString().split('T')[0];
+    document.getElementById('arrival').min = today;
+    document.getElementById('depart').min  = today;
+    document.getElementById('arrival').addEventListener('change', function () {
+      document.getElementById('depart').min = this.value;
+    });
+  })();
+
+  // Show success message if ?success in URL (Formspree redirect)
+  if (window.location.search.includes('success')) {
+    document.getElementById('form-success').style.display = 'block';
+    document.getElementById('booking-form').style.display = 'none';
+  }
+
+  function renderBookingSelects() {
+    var roomSel = document.getElementById('select-room');
+    var actSel  = document.getElementById('select-activity');
+    if (roomSel) {
+      roomSel.innerHTML = '<option value="">' + t('reservation_room_default') + '</option>' +
+        ROOMS.map(function (r) {
+          return '<option value="' + r.id + '">' + getItemName(r) + ' — ' + formatPrice(r.price) + ' ' + t('rooms_card_price') + '</option>';
+        }).join('');
+    }
+    if (actSel) {
+      actSel.innerHTML = '<option value="">' + t('reservation_activity_default') + '</option>' +
+        ACTIVITIES.map(function (a) {
+          return '<option value="' + a.id + '">' + getItemName(a) + ' — ' + formatPrice(a.price) + ' ' + t('activities_per_person') + '</option>';
+        }).join('');
+    }
+  }
+
+  applyLang();
+  preselectFromURL();
+</script>
+</body>
+</html>

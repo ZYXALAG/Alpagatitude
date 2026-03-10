@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c8e8d0"/>
+      <stop offset="100%" stop-color="#e8f5eb"/>
+    </linearGradient>
+  </defs>
+  <!-- Fond prairie douce -->
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <!-- Sol -->
+  <ellipse cx="400" cy="490" rx="500" ry="80" fill="#5a9e6f" opacity="0.5"/>
+  <rect x="0" y="420" width="800" height="80" fill="#4a9060"/>
+  <!-- Herbe -->
+  <ellipse cx="100" cy="422" rx="100" ry="15" fill="#3d7a52" opacity="0.4"/>
+  <ellipse cx="700" cy="424" rx="110" ry="14" fill="#3d7a52" opacity="0.4"/>
+  <!-- Clôture en bois -->
+  <rect x="40"  y="300" width="14" height="120" rx="4" fill="#a07060"/>
+  <rect x="160" y="300" width="14" height="120" rx="4" fill="#a07060"/>
+  <rect x="280" y="300" width="14" height="120" rx="4" fill="#a07060"/>
+  <rect x="40" y="320" width="254" height="12" rx="3" fill="#c09070"/>
+  <rect x="40" y="360" width="254" height="12" rx="3" fill="#c09070"/>
+  <rect x="40" y="400" width="254" height="12" rx="3" fill="#c09070"/>
+  <!-- Mangeoire en bois -->
+  <rect x="310" y="360" width="130" height="40" rx="6" fill="#c8a870"/>
+  <rect x="300" y="355" width="150" height="12" rx="5" fill="#a07840"/>
+  <rect x="318" y="400" width="14" height="30" rx="4" fill="#a07840"/>
+  <rect x="408" y="400" width="14" height="30" rx="4" fill="#a07840"/>
+  <!-- Foin dans la mangeoire -->
+  <ellipse cx="375" cy="360" rx="55" ry="14" fill="#d4b848" opacity="0.85"/>
+  <!-- Carottes / légumes -->
+  <rect x="355" y="348" width="8" height="20" rx="3" fill="#e8640e" transform="rotate(15,359,358)"/>
+  <rect x="373" y="346" width="8" height="22" rx="3" fill="#e8640e"/>
+  <rect x="390" y="349" width="8" height="19" rx="3" fill="#e8640e" transform="rotate(-10,394,359)"/>
+  <!-- Alpaga principal -->
+  <ellipse cx="420" cy="380" rx="55" ry="33" fill="#f5f0e8"/>
+  <!-- toison -->
+  <ellipse cx="415" cy="372" rx="52" ry="28" fill="#fff" opacity="0.7"/>
+  <rect x="395" y="404" width="14" height="42" rx="5" fill="#e0d0bc"/>
+  <rect x="416" y="406" width="14" height="44" rx="5" fill="#e0d0bc"/>
+  <rect x="437" y="406" width="14" height="42" rx="5" fill="#e0d0bc"/>
+  <rect x="457" y="402" width="14" height="38" rx="5" fill="#e0d0bc"/>
+  <!-- Cou et tête -->
+  <ellipse cx="472" cy="370" rx="22" ry="18" fill="#f5f0e8"/>
+  <!-- tête penchée vers la mangeoire -->
+  <ellipse cx="475" cy="352" rx="13" ry="17" fill="#f5f0e8" transform="rotate(30,475,352)"/>
+  <ellipse cx="462" cy="344" rx="5" ry="9" fill="#f5f0e8" transform="rotate(-20,462,344)"/>
+  <ellipse cx="474" cy="340" rx="5" ry="9" fill="#f5f0e8" transform="rotate(10,474,340)"/>
+  <circle cx="476" cy="348" r="3" fill="#3a2a1a"/>
+  <ellipse cx="480" cy="360" rx="7" ry="5" fill="#e8c8b0"/>
+  <!-- Main de la personne qui donne à manger -->
+  <rect x="192" y="330" width="28" height="80" rx="10" fill="#c4966a"/>
+  <rect x="172" y="310" width="22" height="60" rx="8" fill="#c4966a" transform="rotate(20,183,340)"/>
+  <!-- Bras -->
+  <rect x="100" y="280" width="28" height="100" rx="10" fill="#c4966a" transform="rotate(-30,114,330)"/>
+  <!-- Corps de la personne (partiel) -->
+  <rect x="60" y="200" width="80" height="160" rx="20" fill="#3d7a52"/>
+  <circle cx="100" cy="180" r="36" fill="#c4a882"/>
+  <!-- 2e alpaga (derrière) -->
+  <ellipse cx="570" cy="392" rx="48" ry="28" fill="#e8d8c0"/>
+  <ellipse cx="565" cy="384" rx="45" ry="24" fill="#f0e8d8" opacity="0.6"/>
+  <rect x="548" y="412" width="12" height="38" rx="5" fill="#d4c4ac"/>
+  <rect x="567" y="413" width="12" height="40" rx="5" fill="#d4c4ac"/>
+  <rect x="586" y="413" width="12" height="38" rx="5" fill="#d4c4ac"/>
+  <rect x="603" y="410" width="12" height="35" rx="5" fill="#d4c4ac"/>
+  <ellipse cx="610" cy="383" rx="19" ry="15" fill="#e8d8c0"/>
+  <ellipse cx="618" cy="369" rx="9" ry="13" fill="#e8d8c0"/>
+  <ellipse cx="612" cy="358" rx="5" ry="8" fill="#e8d8c0" transform="rotate(-10,612,358)"/>
+  <ellipse cx="624" cy="356" rx="5" ry="8" fill="#e8d8c0" transform="rotate(10,624,356)"/>
+  <circle cx="622" cy="366" r="2.5" fill="#3a2a1a"/>
+  <!-- Fleurs du pré -->
+  <circle cx="700" cy="415" r="7" fill="#f9e46a"/>
+  <circle cx="720" cy="408" r="5" fill="#fff"/>
+  <circle cx="680" cy="418" r="6" fill="#f9b0c0"/>
+  <circle cx="140" cy="416" r="7" fill="#f9e46a"/>
+  <circle cx="160" cy="410" r="5" fill="#f9b0c0"/>
+</svg>

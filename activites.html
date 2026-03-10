@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activités — Alpagatitude</title>
+  <meta name="description" content="Découvrez nos activités uniques avec les alpagas : balades, nourrissage, séances photo et plus.">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+</head>
+<body>
+
+<!-- ══ HEADER ════════════════════════════════════════════════════════════ -->
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="./index.html" class="logo">
+      <span class="logo-icon">🦙</span>
+      <span class="logo-text">Alpagatitude</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" id="main-nav" role="navigation">
+      <ul>
+        <li><a href="./index.html" data-i18n="nav_home">Accueil</a></li>
+        <li><a href="./chambres.html" data-i18n="nav_rooms">Hébergements</a></li>
+        <li><a href="./activites.html" class="active" data-i18n="nav_activities">Activités</a></li>
+        <li><a href="./reservation.html" class="btn-nav" data-i18n="nav_reservation">Réserver</a></li>
+        <li><a href="./contact.html" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="fr" title="Français">🇫🇷</button>
+        <button class="lang-btn" data-lang="en" title="English">🇬🇧</button>
+        <button class="lang-btn" data-lang="es" title="Español">🇪🇸</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+
+<!-- ═══════════ PAGE HERO ═════════════════════════════════════════════════ -->
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="fil d'ariane">
+      <a href="./index.html" data-i18n="nav_home">Accueil</a>
+      <span class="breadcrumb-sep">›</span>
+      <span data-i18n="nav_activities">Activités</span>
+    </nav>
+    <h1 data-i18n="activities_page_title">Nos Activités</h1>
+    <p data-i18n="activities_page_subtitle">Des expériences uniques et mémorables avec nos alpagas</p>
+  </div>
+</section>
+
+<!-- ═══════════ ACTIVITÉS GRID ════════════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="cards-grid">
+
+      <!-- ─────── Balade ─────── -->
+      <div class="card" id="balade">
+        <div class="card-img">
+          <img src="./assets/activities/balade-alpagas.svg" alt="Balade avec les alpagas" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="activity-icon">🦙</span>
+          <h2 data-i18n="act1_name">Balade avec les alpagas</h2>
+          <p data-i18n="act1_desc_long">Partez en balade dans les chemins bucoliques du domaine, guidé par nos alpagas curieux et attachants. Une expérience douce et ressourçante en pleine nature.</p>
+          <ul class="room-features">
+            <li>⏱ <span data-i18n="act1_duration">1h30</span></li>
+            <li>💶 <strong>25,00 €</strong> <span data-i18n="activities_per_person">/ personne</span></li>
+            <li>👥 <span data-i18n="act1_max">8 personnes max.</span></li>
+            <li>✅ <span data-i18n="act_all_ages">Accessible à tous les âges</span></li>
+          </ul>
+          <a href="./reservation.html?type=activity&id=1" class="btn btn-primary" data-i18n="activities_book_btn">Réserver cette activité</a>
+        </div>
+      </div>
+
+      <!-- ─────── Nourrissage ─────── -->
+      <div class="card" id="nourrissage">
+        <div class="card-img">
+          <img src="./assets/activities/nourrissage.svg" alt="Nourrissage et câlins" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="activity-icon">🌾</span>
+          <h2 data-i18n="act2_name">Nourrissage & câlins</h2>
+          <p data-i18n="act2_desc_long">Approchez-vous de nos alpagas, donnez-leur à manger et profitez de leurs caresses douces. Un moment privilégié et attendrissant pour toute la famille.</p>
+          <ul class="room-features">
+            <li>⏱ <span data-i18n="act2_duration">45 min</span></li>
+            <li>💶 <strong>15,00 €</strong> <span data-i18n="activities_per_person">/ personne</span></li>
+            <li>👥 <span data-i18n="act2_max">12 personnes max.</span></li>
+            <li>👶 <span data-i18n="act_kids">Idéal pour les enfants</span></li>
+          </ul>
+          <a href="./reservation.html?type=activity&id=2" class="btn btn-primary" data-i18n="activities_book_btn">Réserver cette activité</a>
+        </div>
+      </div>
+
+      <!-- ─────── Séance photo ─────── -->
+      <div class="card" id="seance-photo">
+        <div class="card-img">
+          <img src="./assets/activities/seance-photo.svg" alt="Séance photo avec les alpagas" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="activity-icon">📸</span>
+          <h2 data-i18n="act3_name">Séance photo avec les alpagas</h2>
+          <p data-i18n="act3_desc_long">Immortalisez votre visite avec une séance photo unique. Posez aux côtés de nos alpagas dans les décors naturels du domaine et repartez avec de magnifiques souvenirs.</p>
+          <ul class="room-features">
+            <li>⏱ <span data-i18n="act3_duration">1h</span></li>
+            <li>💶 <strong>35,00 €</strong> <span data-i18n="activities_per_person">/ personne</span></li>
+            <li>👥 <span data-i18n="act3_max">6 personnes max.</span></li>
+            <li>📷 <span data-i18n="act_bring_camera">Apportez votre appareil photo</span></li>
+          </ul>
+          <a href="./reservation.html?type=activity&id=3" class="btn btn-primary" data-i18n="activities_book_btn">Réserver cette activité</a>
+        </div>
+      </div>
+
+      <!-- ─────── Atelier laine ─────── -->
+      <div class="card" id="atelier">
+        <div class="card-img">
+          <img src="./assets/activities/atelier-laine.svg" alt="Atelier laine" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="activity-icon">🧶</span>
+          <h2 data-i18n="act4_name">Atelier laine & tonte</h2>
+          <p data-i18n="act4_desc_long">Découvrez le travail de la laine d'alpaga, de la tonte au filage. Repartez avec une création faite main et apprenez les secrets de ce précieux textile naturel.</p>
+          <ul class="room-features">
+            <li>⏱ <span data-i18n="act4_duration">2h</span></li>
+            <li>💶 <strong>40,00 €</strong> <span data-i18n="activities_per_person">/ personne</span></li>
+            <li>👥 <span data-i18n="act4_max">10 personnes max.</span></li>
+            <li>🎁 <span data-i18n="act_souvenir">Souvenir inclus</span></li>
+          </ul>
+          <a href="./reservation.html?type=activity&id=4" class="btn btn-primary" data-i18n="activities_book_btn">Réserver cette activité</a>
+        </div>
+      </div>
+
+      <!-- ─────── Randonnée ─────── -->
+      <div class="card" id="randonnee">
+        <div class="card-img">
+          <img src="./assets/activities/randonnee.svg" alt="Randonnée accompagnée" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="activity-icon">🥾</span>
+          <h2 data-i18n="act5_name">Randonnée accompagnée</h2>
+          <p data-i18n="act5_desc_long">Partez pour une grande randonnée dans les sentiers montagneux du domaine, accompagnés de nos guides expérimentés et d'un alpaga bien sûr !</p>
+          <ul class="room-features">
+            <li>⏱ <span data-i18n="act5_duration">3h</span></li>
+            <li>💶 <strong>45,00 €</strong> <span data-i18n="activities_per_person">/ personne</span></li>
+            <li>👥 <span data-i18n="act5_max">10 personnes max.</span></li>
+            <li>🥾 <span data-i18n="act_hiking_shoes">Chaussures de marche recommandées</span></li>
+          </ul>
+          <a href="./reservation.html?type=activity&id=5" class="btn btn-primary" data-i18n="activities_book_btn">Réserver cette activité</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ INFO PRATIQUES ════════════════════════════════════════════ -->
+<section class="section section-alt">
+  <div class="container" style="max-width:800px;text-align:center;">
+    <h2 data-i18n="activities_info_title">Informations Pratiques</h2>
+    <span class="section-divider"></span>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-top:2rem;text-align:left;">
+      <div class="feature-card">
+        <div class="feature-icon">📅</div>
+        <h4 data-i18n="activities_booking_title">Réservation</h4>
+        <p data-i18n="activities_booking_text">Réservation en ligne ou par téléphone 48h à l'avance.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌦️</div>
+        <h4 data-i18n="activities_weather_title">Météo</h4>
+        <p data-i18n="activities_weather_text">Activités maintenues par temps couvert. Annulation si pluie forte ou orage.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">👕</div>
+        <h4 data-i18n="activities_dress_title">Tenue</h4>
+        <p data-i18n="activities_dress_text">Tenues confortables et fermées recommandées pour les activités extérieures.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">♿</div>
+        <h4 data-i18n="activities_access_title">Accessibilité</h4>
+        <p data-i18n="activities_access_text">Nourrissage & Séance photo accessibles aux personnes à mobilité réduite.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CTA ════════════════════════════════════════════════════════ -->
+<section class="section section-green" style="text-align:center;">
+  <div class="container">
+    <h2 data-i18n="cta_title">Prêt à vivre l'expérience Alpagatitude ?</h2>
+    <p style="margin:1rem auto;max-width:600px;" data-i18n="cta_text">Nos alpagas vous attendent !</p>
+    <a href="./reservation.html" class="btn btn-outline" style="color:var(--cream);border-color:var(--cream);" data-i18n="cta_btn">Réserver maintenant</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ══ FOOTER ════════════════════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">🦙 Alpagatitude</div>
+      <p data-i18n="footer_tagline">Un domaine d'exception avec des alpagas</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="white" stroke-width="2"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h4 data-i18n="footer_links">Liens rapides</h4>
+      <ul>
+        <li><a href="./index.html" data-i18n="nav_home">Accueil</a></li>
+        <li><a href="./chambres.html" data-i18n="nav_rooms">Hébergements</a></li>
+        <li><a href="./activites.html" data-i18n="nav_activities">Activités</a></li>
+        <li><a href="./reservation.html" data-i18n="nav_reservation">Réserver</a></li>
+        <li><a href="./contact.html" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4 data-i18n="footer_contact_title">Contact</h4>
+      <p>📍 <span data-i18n="contact_address_val">123 Route des Alpagas, 00000 La Montagne</span></p>
+      <p>📞 <span data-i18n="contact_phone_val">+33 (0)6 00 00 00 00</span></p>
+      <p>✉️ <a href="mailto:contact@alpagatitude.com" data-i18n="contact_email_val">contact@alpagatitude.com</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>&copy; <span id="footer-year"></span> Alpagatitude — <span data-i18n="footer_rights">Tous droits réservés</span></span>
+      <span data-i18n="footer_made_with">Fait avec ❤️ pour les alpagas</span>
+    </div>
+  </div>
+</footer>
+
+<script src="./js/main.js"></script>
+<script src="./js/i18n.js"></script>
+<script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

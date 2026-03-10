@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Alpagatitude</title>
+  <meta name="description" content="Contactez le Domaine Alpagatitude pour toute question.">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+</head>
+<body>
+
+<!-- ══ HEADER ════════════════════════════════════════════════════════════ -->
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="./index.html" class="logo">
+      <span class="logo-icon">🦙</span>
+      <span class="logo-text">Alpagatitude</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" id="main-nav" role="navigation">
+      <ul>
+        <li><a href="./index.html" data-i18n="nav_home">Accueil</a></li>
+        <li><a href="./chambres.html" data-i18n="nav_rooms">Hébergements</a></li>
+        <li><a href="./activites.html" data-i18n="nav_activities">Activités</a></li>
+        <li><a href="./reservation.html" class="btn-nav" data-i18n="nav_reservation">Réserver</a></li>
+        <li><a href="./contact.html" class="active" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="fr" title="Français">🇫🇷</button>
+        <button class="lang-btn" data-lang="en" title="English">🇬🇧</button>
+        <button class="lang-btn" data-lang="es" title="Español">🇪🇸</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+
+<!-- ═══════════ PAGE HERO ═════════════════════════════════════════════════ -->
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="fil d'ariane">
+      <a href="./index.html" data-i18n="nav_home">Accueil</a>
+      <span class="breadcrumb-sep">›</span>
+      <span data-i18n="nav_contact">Contact</span>
+    </nav>
+    <h1 data-i18n="contact_page_title">Contactez-nous</h1>
+    <p data-i18n="contact_page_subtitle">Une question ? Nous sommes là pour vous répondre</p>
+  </div>
+</section>
+
+<!-- ═══════════ CONTACT CONTENT ══════════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;" class="contact-layout">
+
+      <!-- Informations -->
+      <div>
+        <h2 data-i18n="contact_info_title">Nos Informations</h2>
+        <span class="section-divider" style="margin:0 0 1.5rem;"></span>
+
+        <div style="display:flex;flex-direction:column;gap:1.5rem;">
+          <div class="feature-card" style="flex-direction:row;align-items:center;gap:1rem;">
+            <div class="feature-icon" style="flex-shrink:0;">📍</div>
+            <div>
+              <h4 data-i18n="contact_address">Adresse</h4>
+              <p data-i18n="contact_address_val">123 Route des Alpagas, 00000 La Montagne</p>
+            </div>
+          </div>
+          <div class="feature-card" style="flex-direction:row;align-items:center;gap:1rem;">
+            <div class="feature-icon" style="flex-shrink:0;">📞</div>
+            <div>
+              <h4 data-i18n="contact_phone">Téléphone</h4>
+              <p><a href="tel:+33600000000" data-i18n="contact_phone_val">+33 (0)6 00 00 00 00</a></p>
+            </div>
+          </div>
+          <div class="feature-card" style="flex-direction:row;align-items:center;gap:1rem;">
+            <div class="feature-icon" style="flex-shrink:0;">✉️</div>
+            <div>
+              <h4 data-i18n="contact_email">Email</h4>
+              <p><a href="mailto:contact@alpagatitude.com" data-i18n="contact_email_val">contact@alpagatitude.com</a></p>
+            </div>
+          </div>
+          <div class="feature-card" style="flex-direction:row;align-items:center;gap:1rem;">
+            <div class="feature-icon" style="flex-shrink:0;">🕑</div>
+            <div>
+              <h4 data-i18n="contact_hours">Horaires</h4>
+              <p data-i18n="contact_hours_val">Lundi–Dimanche, 8h–20h</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem;">
+          <h3 style="margin-bottom:1rem;" data-i18n="contact_social">Réseaux sociaux</h3>
+          <div style="display:flex;gap:1rem;">
+            <a href="#" class="btn btn-outline" style="display:flex;align-items:center;gap:.5rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              Facebook
+            </a>
+            <a href="#" class="btn btn-outline" style="display:flex;align-items:center;gap:.5rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.1" fill="currentColor" stroke-width="3"/></svg>
+              Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulaire -->
+      <div>
+        <h2 data-i18n="contact_form_title">Envoyez-nous un message</h2>
+        <span class="section-divider" style="margin:0 0 1.5rem;"></span>
+
+        <!--
+          FORMSPREE SETUP:
+          1. Créez un compte sur https://formspree.io
+          2. Créez un nouveau formulaire ("Contact Alpagatitude")
+          3. Copiez l'URL (ex: https://formspree.io/f/abcdefgh)
+          4. Remplacez "YOUR_FORM_ID" ci-dessous par votre identifiant
+        -->
+        <form id="contact-form"
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST">
+
+          <input type="hidden" name="_subject" value="Message Contact - Alpagatitude">
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+            <div class="form-group">
+              <label class="form-label" for="c-firstname" data-i18n="resa_firstname">Prénom</label>
+              <input type="text" class="form-control" name="firstname" id="c-firstname"
+                     data-i18n-ph="resa_firstname_ph" placeholder="Votre prénom" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="c-lastname" data-i18n="resa_lastname">Nom</label>
+              <input type="text" class="form-control" name="lastname" id="c-lastname"
+                     data-i18n-ph="resa_lastname_ph" placeholder="Votre nom" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="c-email" data-i18n="resa_email">Email</label>
+            <input type="email" class="form-control" name="email" id="c-email"
+                   data-i18n-ph="resa_email_ph" placeholder="votre@email.com" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="c-subject" data-i18n="contact_subject">Sujet</label>
+            <input type="text" class="form-control" name="subject" id="c-subject"
+                   data-i18n-ph="contact_subject_ph" placeholder="L'objet de votre message" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="c-message" data-i18n="contact_message">Message</label>
+            <textarea class="form-control" name="message" id="c-message" rows="5"
+                      data-i18n-ph="contact_message_ph" placeholder="Votre message..." required></textarea>
+          </div>
+
+          <!-- Honeypot anti-spam -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+          <button type="submit" class="btn btn-primary" style="width:100%;padding:1rem;" data-i18n="contact_send">
+            Envoyer le message
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══ FOOTER ════════════════════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">🦙 Alpagatitude</div>
+      <p data-i18n="footer_tagline">Un domaine d'exception avec des alpagas</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="white" stroke-width="2"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h4 data-i18n="footer_links">Liens rapides</h4>
+      <ul>
+        <li><a href="./index.html" data-i18n="nav_home">Accueil</a></li>
+        <li><a href="./chambres.html" data-i18n="nav_rooms">Hébergements</a></li>
+        <li><a href="./activites.html" data-i18n="nav_activities">Activités</a></li>
+        <li><a href="./reservation.html" data-i18n="nav_reservation">Réserver</a></li>
+        <li><a href="./contact.html" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4 data-i18n="footer_contact_title">Contact</h4>
+      <p>📍 <span data-i18n="contact_address_val">123 Route des Alpagas, 00000 La Montagne</span></p>
+      <p>📞 <span data-i18n="contact_phone_val">+33 (0)6 00 00 00 00</span></p>
+      <p>✉️ <a href="mailto:contact@alpagatitude.com" data-i18n="contact_email_val">contact@alpagatitude.com</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>&copy; <span id="footer-year"></span> Alpagatitude — <span data-i18n="footer_rights">Tous droits réservés</span></span>
+      <span data-i18n="footer_made_with">Fait avec ❤️ pour les alpagas</span>
+    </div>
+  </div>
+</footer>
+
+<script src="./js/main.js"></script>
+<script src="./js/i18n.js"></script>
+<script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
