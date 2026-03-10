@@ -1,0 +1,14 @@
+Options -Indexes
+RewriteEngine On
+
+# Forcer index.php
+DirectoryIndex index.php
+
+# Bloquer les fichiers sensibles
+<FilesMatch "\.(sql|log|env|bak|git)$">
+    Require all denied
+</FilesMatch>
+
+# Protéger le dossier includes depuis le web
+RewriteRule ^includes/ - [F,L]
+RewriteRule ^lang/ - [F,L]

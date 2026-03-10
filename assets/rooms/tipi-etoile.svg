@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="night" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1b3e"/>
+      <stop offset="60%" stop-color="#1a2d5a"/>
+      <stop offset="100%" stop-color="#2e4a2a"/>
+    </linearGradient>
+    <linearGradient id="fire" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#e84a10"/>
+      <stop offset="100%" stop-color="#f9d56e"/>
+    </linearGradient>
+  </defs>
+  <!-- Ciel nocturne -->
+  <rect width="800" height="500" fill="url(#night)"/>
+  <!-- Lune -->
+  <circle cx="680" cy="80" r="50" fill="#fef3c7"/>
+  <circle cx="700" cy="68" r="44" fill="#1a2d5a"/>
+  <!-- Étoiles -->
+  <circle cx="60" cy="50" r="2.5" fill="#fff" opacity="0.9"/>
+  <circle cx="130" cy="30" r="2" fill="#fff" opacity="0.8"/>
+  <circle cx="200" cy="70" r="3" fill="#fff" opacity="0.85"/>
+  <circle cx="310" cy="25" r="2" fill="#fff" opacity="0.7"/>
+  <circle cx="380" cy="55" r="2.5" fill="#fff" opacity="0.9"/>
+  <circle cx="450" cy="20" r="2" fill="#fff" opacity="0.75"/>
+  <circle cx="520" cy="45" r="3" fill="#fff" opacity="0.8"/>
+  <circle cx="580" cy="30" r="2" fill="#fff" opacity="0.7"/>
+  <circle cx="100" cy="100" r="1.5" fill="#fff" opacity="0.6"/>
+  <circle cx="250" cy="110" r="2" fill="#fff" opacity="0.65"/>
+  <circle cx="420" cy="90" r="1.5" fill="#fff" opacity="0.55"/>
+  <circle cx="160" cy="140" r="2" fill="#fff" opacity="0.5"/>
+  <circle cx="540" cy="80" r="1.5" fill="#fff" opacity="0.6"/>
+  <circle cx="760" cy="140" r="2" fill="#fff" opacity="0.7"/>
+  <circle cx="700" cy="40" r="1.5" fill="#fff" opacity="0.5"/>
+  <!-- Voie lactée -->
+  <ellipse cx="350" cy="80" rx="300" ry="30" fill="#4060a0" opacity="0.15" transform="rotate(-20,350,80)"/>
+  <!-- Prairie / sol -->
+  <rect x="0" y="370" width="800" height="130" fill="#1e3e22"/>
+  <ellipse cx="400" cy="372" rx="460" ry="28" fill="#2a5030" opacity="0.5"/>
+  <!-- Tipi - silhouette -->
+  <polygon points="400,80 245,400 555,400" fill="#8b6914"/>
+  <polygon points="400,80 260,400 540,400" fill="#c4a060"/>
+  <!-- Rayures décoratives tipi -->
+  <line x1="400" y1="80" x2="360" y2="400" stroke="#8b6914" stroke-width="3" opacity="0.6"/>
+  <line x1="400" y1="80" x2="320" y2="400" stroke="#8b6914" stroke-width="2.5" opacity="0.4"/>
+  <line x1="400" y1="80" x2="440" y2="400" stroke="#8b6914" stroke-width="3" opacity="0.6"/>
+  <line x1="400" y1="80" x2="482" y2="400" stroke="#8b6914" stroke-width="2.5" opacity="0.4"/>
+  <!-- Motifs géométriques tipi -->
+  <polygon points="400,130 382,200 418,200" fill="#2e5a3e" opacity="0.7"/>
+  <polygon points="400,220 376,280 424,280" fill="#b8860b" opacity="0.6"/>
+  <!-- Piquets du tipi -->
+  <line x1="400" y1="75" x2="390" y2="35" stroke="#7a5030" stroke-width="4"/>
+  <line x1="400" y1="75" x2="408" y2="32" stroke="#7a5030" stroke-width="3.5"/>
+  <line x1="400" y1="75" x2="416" y2="38" stroke="#7a5030" stroke-width="3"/>
+  <!-- Entrée tipi -->
+  <ellipse cx="400" cy="390" rx="45" ry="20" fill="#2a1a0a" opacity="0.8"/>
+  <rect x="377" y="340" width="46" height="58" rx="22" fill="#2a1a0a" opacity="0.7"/>
+  <!-- Feu de camp -->
+  <ellipse cx="320" cy="408" rx="30" ry="10" fill="#2a1408" opacity="0.8"/>
+  <polygon points="320,340 306,408 334,408" fill="url(#fire)" opacity="0.9"/>
+  <polygon points="320,355 310,408 330,408" fill="#f9d56e" opacity="0.7"/>
+  <polygon points="314,360 304,408 324,408" fill="#e84a10" opacity="0.8"/>
+  <polygon points="326,358 316,408 336,408" fill="#e84a10" opacity="0.7"/>
+  <!-- Lueur du feu sur le sol -->
+  <ellipse cx="320" cy="405" rx="70" ry="20" fill="#e84a10" opacity="0.12"/>
+  <!-- Reflet lune sur la prairie -->
+  <ellipse cx="660" cy="385" rx="80" ry="15" fill="#fef3c7" opacity="0.06"/>
+  <!-- Silhouette alpaga au clair de lune -->
+  <ellipse cx="590" cy="388" rx="36" ry="21" fill="#1e3e22"/>
+  <ellipse cx="622" cy="380" rx="15" ry="12" fill="#1e3e22"/>
+  <ellipse cx="630" cy="370" rx="7" ry="10" fill="#1e3e22"/>
+  <rect x="574" y="400" width="8" height="20" rx="3" fill="#1e3e22"/>
+  <rect x="588" y="401" width="8" height="22" rx="3" fill="#1e3e22"/>
+  <rect x="604" y="401" width="8" height="21" rx="3" fill="#1e3e22"/>
+  <rect x="618" y="398" width="8" height="18" rx="3" fill="#1e3e22"/>
+</svg>

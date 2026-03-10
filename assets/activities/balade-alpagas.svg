@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="sky3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a8d8f0"/>
+      <stop offset="100%" stop-color="#d4ede8"/>
+    </linearGradient>
+    <linearGradient id="path" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d4b896"/>
+      <stop offset="100%" stop-color="#c8a87a"/>
+    </linearGradient>
+  </defs>
+  <!-- Ciel -->
+  <rect width="800" height="500" fill="url(#sky3)"/>
+  <!-- Soleil -->
+  <circle cx="720" cy="75" r="48" fill="#f9e46a" opacity="0.88"/>
+  <!-- Collines -->
+  <ellipse cx="150" cy="360" rx="280" ry="120" fill="#5a9e6f" opacity="0.5"/>
+  <ellipse cx="650" cy="340" rx="260" ry="110" fill="#4d9066" opacity="0.5"/>
+  <rect x="0" y="320" width="800" height="180" fill="#5a9e6f"/>
+  <ellipse cx="400" cy="320" rx="470" ry="28" fill="#4a9060" opacity="0.45"/>
+  <!-- Chemin (perspective) -->
+  <polygon points="310,500 490,500 520,320 280,320" fill="url(#path)" opacity="0.85"/>
+  <line x1="400" y1="320" x2="400" y2="500" stroke="#c0945a" stroke-width="2" stroke-dasharray="16,12" opacity="0.4"/>
+  <!-- Haies et fleurs des bords du chemin -->
+  <ellipse cx="260" cy="340" rx="55" ry="20" fill="#3d7a52" opacity="0.7"/>
+  <ellipse cx="540" cy="345" rx="55" ry="20" fill="#3d7a52" opacity="0.7"/>
+  <!-- Fleurs -->
+  <circle cx="230" cy="335" r="6" fill="#f9e46a"/>
+  <circle cx="248" cy="328" r="5" fill="#fff" opacity="0.8"/>
+  <circle cx="266" cy="340" r="6" fill="#f9e46a"/>
+  <circle cx="552" cy="338" r="5" fill="#fff" opacity="0.8"/>
+  <circle cx="568" cy="332" r="6" fill="#f9e46a"/>
+  <!-- Arbres du chemin -->
+  <rect x="188" y="265" width="16" height="90" rx="4" fill="#8b5e3c"/>
+  <circle cx="196" cy="248" r="42" fill="#2e5a3e"/>
+  <circle cx="178" cy="260" r="28" fill="#3d7a52"/>
+  <rect x="592" y="260" width="16" height="95" rx="4" fill="#8b5e3c"/>
+  <circle cx="600" cy="243" r="44" fill="#2e5a3e"/>
+  <circle cx="620" cy="255" r="30" fill="#3d7a52"/>
+  <!-- 1er alpaga (avec laisse) -->
+  <ellipse cx="350" cy="378" rx="44" ry="26" fill="#f5f0e8"/>
+  <rect x="328" y="396" width="12" height="36" rx="5" fill="#e0d0bc"/>
+  <rect x="346" y="398" width="12" height="38" rx="5" fill="#e0d0bc"/>
+  <rect x="364" y="398" width="12" height="36" rx="5" fill="#e0d0bc"/>
+  <rect x="381" y="394" width="12" height="33" rx="5" fill="#e0d0bc"/>
+  <ellipse cx="390" cy="370" rx="20" ry="16" fill="#f5f0e8"/>
+  <ellipse cx="399" cy="356" rx="10" ry="14" fill="#f5f0e8"/>
+  <ellipse cx="393" cy="344" rx="5" ry="8" fill="#f5f0e8" transform="rotate(-15,393,344)"/>
+  <ellipse cx="407" cy="342" rx="5" ry="8" fill="#f5f0e8" transform="rotate(15,407,342)"/>
+  <circle cx="405" cy="353" r="3" fill="#3a2a1a"/>
+  <ellipse cx="406" cy="363" rx="6" ry="4" fill="#e8c8b0"/>
+  <!-- Laisse -->
+  <path d="M 406 356 Q 460 340 490 350 Q 530 365 560 350" stroke="#8b5e3c" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- 2e alpaga (derrière) -->
+  <ellipse cx="490" cy="365" rx="38" ry="22" fill="#e8d8c0"/>
+  <rect x="470" y="381" width="10" height="32" rx="4" fill="#d4c4ac"/>
+  <rect x="486" y="382" width="10" height="34" rx="4" fill="#d4c4ac"/>
+  <rect x="502" y="382" width="10" height="32" rx="4" fill="#d4c4ac"/>
+  <rect x="517" y="379" width="10" height="29" rx="4" fill="#d4c4ac"/>
+  <ellipse cx="524" cy="358" rx="17" ry="14" fill="#e8d8c0"/>
+  <ellipse cx="532" cy="345" rx="9" ry="12" fill="#e8d8c0"/>
+  <ellipse cx="526" cy="335" rx="4" ry="7" fill="#e8d8c0" transform="rotate(-12,526,335)"/>
+  <ellipse cx="538" cy="334" rx="4" ry="7" fill="#e8d8c0" transform="rotate(12,538,334)"/>
+  <circle cx="537" cy="342" r="2.5" fill="#3a2a1a"/>
+  <!-- Personne qui promène (silhouette) -->
+  <circle cx="562" cy="322" r="16" fill="#c4a882"/>
+  <rect x="554" y="338" width="16" height="44" rx="6" fill="#2e5a3e"/>
+  <rect x="536" y="345" width="20" height="8" rx="4" fill="#2e5a3e"/>
+  <rect x="552" y="382" width="10" height="30" rx="4" fill="#5a4030"/>
+  <rect x="566" y="382" width="10" height="30" rx="4" fill="#5a4030"/>
+  <!-- Nuages -->
+  <ellipse cx="200" cy="55" rx="65" ry="22" fill="#fff" opacity="0.75"/>
+  <ellipse cx="160" cy="62" rx="44" ry="18" fill="#fff" opacity="0.75"/>
+  <ellipse cx="240" cy="62" rx="44" ry="18" fill="#fff" opacity="0.75"/>
+  <ellipse cx="500" cy="45" rx="52" ry="18" fill="#fff" opacity="0.6"/>
+</svg>

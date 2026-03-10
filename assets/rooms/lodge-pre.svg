@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c8e6f5"/>
+      <stop offset="100%" stop-color="#e8f4fb"/>
+    </linearGradient>
+    <linearGradient id="grass2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6aad7a"/>
+      <stop offset="100%" stop-color="#4d9066"/>
+    </linearGradient>
+  </defs>
+  <!-- Ciel -->
+  <rect width="800" height="500" fill="url(#sky2)"/>
+  <!-- Soleil -->
+  <circle cx="90" cy="80" r="45" fill="#fce38a" opacity="0.9"/>
+  <!-- Collines douces -->
+  <ellipse cx="200" cy="340" rx="320" ry="100" fill="#8fbc9e" opacity="0.5"/>
+  <ellipse cx="620" cy="330" rx="260" ry="80" fill="#7aad8e" opacity="0.45"/>
+  <!-- Prairie -->
+  <rect x="0" y="320" width="800" height="180" fill="url(#grass2)"/>
+  <ellipse cx="400" cy="322" rx="450" ry="22" fill="#5aa070" opacity="0.4"/>
+  <!-- Lodge - corps long -->
+  <rect x="140" y="220" width="520" height="160" rx="6" fill="#c4a882"/>
+  <!-- Lodge - toit plat à pente douce -->
+  <polygon points="120,220 680,220 700,190 100,190" fill="#8b6914"/>
+  <!-- Bande décorative sur le toit -->
+  <rect x="100" y="186" width="600" height="10" rx="3" fill="#6b4226"/>
+  <!-- Terrasse -->
+  <rect x="530" y="310" width="180" height="70" rx="4" fill="#b89a70"/>
+  <!-- Poteaux terrasse -->
+  <rect x="535" y="300" width="12" height="80" rx="3" fill="#9a7a50"/>
+  <rect x="595" y="300" width="12" height="80" rx="3" fill="#9a7a50"/>
+  <rect x="697" y="300" width="12" height="80" rx="3" fill="#9a7a50"/>
+  <!-- Rambarde terrasse -->
+  <rect x="535" y="298" width="175" height="6" rx="3" fill="#9a7a50"/>
+  <!-- Fenêtres lodge -->
+  <rect x="170" y="250" width="70" height="60" rx="4" fill="#a8d4e8" opacity="0.8"/>
+  <line x1="205" y1="250" x2="205" y2="310" stroke="#fff" stroke-width="2"/>
+  <rect x="290" y="250" width="70" height="60" rx="4" fill="#a8d4e8" opacity="0.8"/>
+  <line x1="325" y1="250" x2="325" y2="310" stroke="#fff" stroke-width="2"/>
+  <rect x="410" y="250" width="70" height="60" rx="4" fill="#a8d4e8" opacity="0.8"/>
+  <line x1="445" y1="250" x2="445" y2="310" stroke="#fff" stroke-width="2"/>
+  <!-- Porte double -->
+  <rect x="540" y="245" width="100" height="135" rx="6" fill="#7a5030"/>
+  <rect x="540" y="245" width="48" height="135" rx="4" fill="#8b5e3c"/>
+  <circle cx="582" cy="316" r="5" fill="#d4a843"/>
+  <circle cx="594" cy="316" r="5" fill="#d4a843"/>
+  <!-- Végétation bordure -->
+  <ellipse cx="140" cy="380" rx="60" ry="25" fill="#3d7a52" opacity="0.6"/>
+  <ellipse cx="680" cy="375" rx="65" ry="22" fill="#3d7a52" opacity="0.6"/>
+  <!-- Arbustes décoratifs -->
+  <circle cx="138" cy="320" r="28" fill="#2e5a3e"/>
+  <circle cx="118" cy="330" r="20" fill="#3d7a52"/>
+  <circle cx="158" cy="325" r="22" fill="#3d7a52"/>
+  <circle cx="672" cy="318" r="25" fill="#2e5a3e"/>
+  <circle cx="698" cy="325" r="22" fill="#3d7a52"/>
+  <!-- Alpagas (2) -->
+  <ellipse cx="300" cy="370" rx="35" ry="22" fill="#f5f0e8"/>
+  <rect x="282" y="384" width="9" height="28" rx="3" fill="#e0d0bc"/>
+  <rect x="298" y="385" width="9" height="30" rx="3" fill="#e0d0bc"/>
+  <rect x="312" y="385" width="9" height="28" rx="3" fill="#e0d0bc"/>
+  <rect x="326" y="382" width="9" height="26" rx="3" fill="#e0d0bc"/>
+  <ellipse cx="334" cy="362" rx="16" ry="13" fill="#f5f0e8"/>
+  <ellipse cx="341" cy="351" rx="8" ry="11" fill="#f5f0e8"/>
+  <circle cx="345" cy="349" r="2" fill="#3a2a1a"/>
+  <ellipse cx="347" cy="358" rx="4" ry="3" fill="#e8c8b0"/>
+  <ellipse cx="337" cy="342" rx="3" ry="6" fill="#f5f0e8" transform="rotate(-12,337,342)"/>
+  <ellipse cx="347" cy="341" rx="3" ry="6" fill="#f5f0e8" transform="rotate(12,347,341)"/>
+
+  <ellipse cx="450" cy="368" rx="33" ry="21" fill="#e8d8c0"/>
+  <rect x="432" y="381" width="9" height="27" rx="3" fill="#d4c4ac"/>
+  <rect x="448" y="382" width="9" height="29" rx="3" fill="#d4c4ac"/>
+  <rect x="462" y="382" width="9" height="27" rx="3" fill="#d4c4ac"/>
+  <rect x="476" y="379" width="9" height="25" rx="3" fill="#d4c4ac"/>
+  <ellipse cx="481" cy="361" rx="15" ry="12" fill="#e8d8c0"/>
+  <ellipse cx="488" cy="350" rx="7" ry="10" fill="#e8d8c0"/>
+  <circle cx="492" cy="348" r="2" fill="#3a2a1a"/>
+  <ellipse cx="337" cy="342" rx="3" ry="6" fill="#e8d8c0" transform="rotate(-12,484,341)"/>
+  <ellipse cx="347" cy="341" rx="3" ry="6" fill="#e8d8c0" transform="rotate(12,494,340)"/>
+  <!-- Nuages -->
+  <ellipse cx="560" cy="60" rx="65" ry="22" fill="#fff" opacity="0.7"/>
+  <ellipse cx="520" cy="66" rx="44" ry="18" fill="#fff" opacity="0.7"/>
+  <ellipse cx="600" cy="66" rx="44" ry="18" fill="#fff" opacity="0.7"/>
+  <ellipse cx="260" cy="45" rx="48" ry="16" fill="#fff" opacity="0.65"/>
+</svg>
